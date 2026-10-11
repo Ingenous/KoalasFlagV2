@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Koalas Flag Football</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="brand"><span class="dot"></span>KOALAS FF</div>
+    <button class="nav-toggle" aria-label="Abrir menú" id="navToggle">☰</button>
+    <nav>
+      <ul id="navList">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#highlights">Highlights</a></li>
+        <li><a href="#fotos">Fotos</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#info">Información</a></li>
+        <li><a href="#" class="nav-login" id="loginBtn">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="inicio" class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="eyebrow-line"><span class="bar"></span>TEMPORADA ACTUAL</div>
+      <h1>KOA<em>LAS</em></h1>
+      <p class="lede">Un equipo, una manada. Seguí cada jugada, cada atrapada y cada touchdown del equipo de flag football que juega con garra desde la banca hasta la end zone.</p>
+      <div class="hero-cta">
+        <a href="#highlights" class="btn btn-solid">Ver highlights</a>
+        <a href="#equipo" class="btn btn-line">Conocer al equipo</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="tag">Próximo partido</div>
+      <h3>Koalas vs. <span id="nextRival">Rival por definir</span></h3>
+      <div class="meta">
+        <span><b>Fecha:</b> <span id="nextDate">Por confirmar</span></span>
+        <span><b>Sede:</b> <span id="nextVenue">Por confirmar</span></span>
+        <span><b>Categoría:</b> <span id="nextCategory">Por confirmar</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stat-strip">
+  <div class="wrap">
+    <div class="stat"><div class="num" id="statPlayed">--</div><div class="lbl">Partidos jugados</div></div>
+    <div class="stat"><div class="num" id="statWins">--</div><div class="lbl">Victorias</div></div>
+    <div class="stat"><div class="num" id="statTds">--</div><div class="lbl">Touchdowns</div></div>
+    <div class="stat"><div class="num" id="statPlayers">--</div><div class="lbl">Jugadores activos</div></div>
+  </div>
+</div>
+
+<section id="highlights">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Highlights</h2>
+      </div>
+      <p class="sec-note">Las mejores jugadas de la temporada, listas para revivir.</p>
+    </div>
+    <div class="highlight-grid" id="highlightGrid">
+      <div class="highlight-card">
+        <div class="play"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        <div class="highlight-meta"><div class="wk">Jornada 1</div><h4>Intercepción clave en zona roja</h4></div>
+      </div>
+      <div class="highlight-card">
+        <div class="play"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        <div class="highlight-meta"><div class="wk">Jornada 2</div><h4>Touchdown de 40 yardas</h4></div>
+      </div>
+      <div class="highlight-card">
+        <div class="play"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        <div class="highlight-meta"><div class="wk">Jornada 3</div><h4>Jugada defensiva del partido</h4></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fotos" class="alt-bg">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Fotos</h2>
+      </div>
+      <p class="sec-note">Momentos del equipo dentro y fuera de la cancha.</p>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="g-item tall">Foto de equipo</div>
+      <div class="g-item">Entrenamiento</div>
+      <div class="g-item wide">Celebración de touchdown</div>
+      <div class="g-item">Banca</div>
+      <div class="g-item">Jugada defensiva</div>
+      <div class="g-item tall">Capitanes</div>
+      <div class="g-item wide">Día de partido</div>
+    </div>
+  </div>
+</section>
+
+<section id="equipo">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Conoce al equipo</h2>
+      </div>
+      <p class="sec-note">La manada completa, jugador por jugador.</p>
+    </div>
+    <div class="roster-grid" id="rosterGrid">
+      <div class="player-card">
+        <div class="player-photo"><span class="jersey-num">7</span></div>
+        <div class="player-info">
+          <div class="pos">Quarterback</div>
+          <h4>Nombre del jugador</h4>
+          <div class="num-line">#7 · Capitán</div>
+        </div>
+      </div>
+      <div class="player-card">
+        <div class="player-photo"><span class="jersey-num">11</span></div>
+        <div class="player-info">
+          <div class="pos">Receptor</div>
+          <h4>Nombre del jugador</h4>
+          <div class="num-line">#11</div>
+        </div>
+      </div>
+      <div class="player-card">
+        <div class="player-photo"><span class="jersey-num">23</span></div>
+        <div class="player-info">
+          <div class="pos">Defensivo</div>
+          <h4>Nombre del jugador</h4>
+          <div class="num-line">#23</div>
+        </div>
+      </div>
+      <div class="player-card">
+        <div class="player-photo"><span class="jersey-num">4</span></div>
+        <div class="player-info">
+          <div class="pos">Rusher</div>
+          <h4>Nombre del jugador</h4>
+          <div class="num-line">#4</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="info" class="alt-bg">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Información del equipo</h2>
+      </div>
+      <p class="sec-note">Todo lo que necesitas saber para seguir a los Koalas.</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>Sobre nosotros</h3>
+        <p>Los Koalas son un equipo de flag football unido por la pasión por el juego y el compañerismo dentro y fuera de la cancha. Cada temporada buscamos crecer como equipo, mejorar jugada a jugada y disfrutar cada partido junto a nuestra comunidad.</p>
+        <h3 style="margin-top:32px;">Entrenamientos</h3>
+        <p>Día y horario por confirmar. Lugar por confirmar.</p>
+        <div class="social-row">
+          <a href="#">Instagram</a>
+          <a href="#">WhatsApp</a>
+          <a href="#">Contacto</a>
+        </div>
+      </div>
+      <div class="info-block">
+        <h3>Calendario de partidos</h3>
+        <ul class="schedule-list">
+          <li>
+            <div>
+              <div class="opp">vs. Rival A</div>
+              <div class="date">Fecha por confirmar</div>
+            </div>
+            <span class="result pending">Próximo</span>
+          </li>
+          <li>
+            <div>
+              <div class="opp">vs. Rival B</div>
+              <div class="date">Fecha por confirmar</div>
+            </div>
+            <span class="result pending">Próximo</span>
+          </li>
+          <li>
+            <div>
+              <div class="opp">vs. Rival C</div>
+              <div class="date">Fecha por confirmar</div>
+            </div>
+            <span class="result pending">Próximo</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">KOALAS FF</div>
+    <p>© 2026 Koalas Flag Football. Hecho con garra.</p>
+  </div>
+</footer>
+
+<!-- POPUP DE LOGIN -->
+<div class="modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+  <div class="modal-box">
+    <button class="modal-close" id="loginClose" aria-label="Cerrar">&times;</button>
+    <h3 id="loginTitle">Iniciar sesión</h3>
+    <p class="modal-sub">Acceso para administrar el contenido del sitio.</p>
+    <form id="loginForm" autocomplete="off">
+      <label class="field"><span>Usuario</span><input type="text" id="loginUser" required></label>
+      <label class="field"><span>Contraseña</span><input type="password" id="loginPass" required></label>
+      <p class="form-error" id="loginError" role="alert"></p>
+      <button type="submit" class="btn btn-solid" style="width:100%; justify-content:center;">Entrar</button>
+    </form>
+  </div>
+</div>
+
+<!-- REPRODUCTOR DE HIGHLIGHTS -->
+<div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Reproductor de video">
+  <div class="video-box">
+    <button class="modal-close" id="videoClose" aria-label="Cerrar">&times;</button>
+    <div class="video-frame" id="videoFrame"></div>
+    <div class="video-title" id="videoTitle"></div>
+  </div>
+</div>
+
+<!-- PANEL DE CATÁLOGO -->
+<div id="admin" aria-hidden="true">
+  <div class="admin-bar">
+    <div class="brand"><span class="dot"></span>Panel de administración</div>
+    <div class="admin-actions">
+      <button class="btn btn-line" id="adminView">Ver sitio</button>
+      <button class="btn btn-solid" id="adminLogout">Cerrar sesión</button>
+    </div>
+  </div>
+  <div class="wrap admin-body">
+    <div class="upload-box">
+      <h3>Información del sitio</h3>
+      <form id="infoForm">
+        <div class="upload-grid">
+          <label class="field full"><span>Próximo partido: rival</span><input type="text" id="inRival" maxlength="40" placeholder="Rival por definir"></label>
+          <label class="field"><span>Próximo partido: fecha</span><input type="text" id="inDate" maxlength="40" placeholder="Por confirmar"></label>
+          <label class="field"><span>Próximo partido: sede</span><input type="text" id="inVenue" maxlength="40" placeholder="Por confirmar"></label>
+          <label class="field full"><span>Próximo partido: categoría</span><input type="text" id="inCategory" maxlength="40" placeholder="Por confirmar"></label>
+          <label class="field"><span>Partidos jugados</span><input type="number" id="inPlayed" min="0" max="9999" step="1" placeholder="--"></label>
+          <label class="field"><span>Victorias</span><input type="number" id="inWins" min="0" max="9999" step="1" placeholder="--"></label>
+          <label class="field"><span>Touchdowns</span><input type="number" id="inTds" min="0" max="9999" step="1" placeholder="--"></label>
+          <label class="field"><span>Jugadores activos</span><input type="number" id="inPlayers" min="0" max="9999" step="1" placeholder="--"></label>
+        </div>
+        <p class="form-msg" id="infoMsg" role="status"></p>
+        <button type="submit" class="btn btn-solid">Guardar información</button>
+      </form>
+    </div>
+
+    <div class="upload-box">
+      <h3>Agregar imagen</h3>
+      <form id="uploadForm">
+        <div class="upload-grid">
+          <label class="field"><span>Dónde aparece en el sitio</span>
+            <select id="upSection">
+              <option value="gallery">Fotos (galería)</option>
+              <option value="highlight">Highlights (portada del clip)</option>
+              <option value="player">Conoce al equipo (foto de jugador)</option>
+            </select>
+          </label>
+          <label class="field"><span id="upFileLabel">Imagen</span><input type="file" id="upFile" accept="image/jpeg,image/png,image/webp" required></label>
+          <label class="field full"><span id="upTitleLabel">Pie de foto (opcional)</span><input type="text" id="upTitle" maxlength="80"></label>
+          <label class="field" id="upPosWrap" hidden><span>Posición</span><input type="text" id="upPos" maxlength="30" placeholder="Quarterback"></label>
+          <label class="field" id="upNumWrap" hidden><span>Número</span><input type="text" id="upNum" maxlength="3" placeholder="7"></label>
+          <label class="field full" id="upLinkWrap" hidden><span>Link del video (opcional): YouTube, Vimeo o archivo .mp4</span><input type="url" id="upLink" placeholder="https://youtube.com/..."></label>
+        </div>
+        <p class="form-msg" id="upMsg" role="status"></p>
+        <button type="submit" class="btn btn-solid">Subir imagen</button>
+      </form>
+    </div>
+
+    <div class="catalog-head"><h3>Catálogo</h3></div>
+    <div class="tabs" id="catTabs">
+      <button data-f="all" class="active">Todas</button>
+      <button data-f="gallery">Fotos</button>
+      <button data-f="highlight">Highlights</button>
+      <button data-f="player">Jugadores</button>
+    </div>
+    <div class="catalog-grid" id="catalogGrid"></div>
+  </div>
+</div>
+
+<script src="/js/app.js"></script>
+
+</body>
+</html>
