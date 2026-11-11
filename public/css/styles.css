@@ -295,8 +295,19 @@ footer p{color:var(--paper-dim); font-size:13px; margin:0;}
 /* ---------- LOGIN / ADMIN ---------- */
 nav a.nav-login{border:1.5px solid var(--turquoise); color:var(--turquoise); padding:8px 16px; border-radius:2px;}
 nav a.nav-login:hover{background:var(--turquoise); color:var(--ink);}
+nav a.nav-login{white-space:nowrap;}
+nav ul{align-items:center;}
+.nav-user{font-size:13px; font-weight:600; color:var(--paper-dim); white-space:nowrap;}
+.nav-user[hidden]{display:none;}
+.nav-user b{color:var(--turquoise); font-weight:700;}
+@media (min-width:761px) and (max-width:1040px){
+  nav ul{gap:16px;}
+}
 @media (max-width:760px){
+  nav ul{align-items:stretch;}
+  nav ul.open{max-height:400px;}
   nav a.nav-login{border:none; border-radius:0; padding:16px 28px;}
+  .nav-user{padding:16px 28px 0;}
 }
 
 .modal{position:fixed; inset:0; z-index:100; display:none; align-items:center; justify-content:center; padding:20px; background:rgba(10,5,20,0.78);}

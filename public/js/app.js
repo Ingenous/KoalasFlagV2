@@ -10,6 +10,15 @@ const loginModal = $('loginModal'), admin = $('admin');
 /* ---------- Llamadas a la API ---------- */
 let logged = false;
 
+/* Menú: con sesión muestra el usuario y el acceso al panel; sin sesión, el botón de login */
+function setSession(s){
+  logged = !!(s && s.logged);
+  const user = $('navUser');
+  user.hidden = !logged;
+  user.innerHTML = logged ? 'Sesión: <b>' + esc(s.usuario) + '</b>' : '';
+  $('loginBtn').textContent = logged ? 'Panel de administración' : 'Login';
+}
+
 async function api(url, opts){
   let res;
   try {
@@ -20,7 +29,7 @@ async function api(url, opts){
   let data = null;
   try { data = await res.json(); } catch(e){}
   if (!res.ok){
-    if (res.status === 401) logged = false;
+    if (res.status === 401 && logged) setSession(null);
     throw new Error((data && data.error) || 'Error del servidor. Intenta de nuevo.');
   }
   return data;
@@ -172,8 +181,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && loginModal
 $('loginForm').addEventListener('submit', async e => {
   e.preventDefault();
   try {
-    await sendJson('/api/login', 'POST', { usuario: $('loginUser').value, password: $('loginPass').value });
-    logged = true;
+    setSession(await sendJson('/api/login', 'POST', { usuario: $('loginUser').value, password: $('loginPass').value }));
     closeLogin();
     openAdmin();
   } catch(err){
@@ -185,7 +193,7 @@ $('loginForm').addEventListener('submit', async e => {
 
 $('adminLogout').addEventListener('click', async () => {
   try { await api('/api/logout', { method: 'POST' }); } catch(e){}
-  logged = false;
+  setSession(null);
   closeAdmin();
 });
 $('adminView').addEventListener('click', () => { renderSite(); closeAdmin(); });
@@ -315,4 +323,4 @@ $('catTabs').addEventListener('click', e => {
 /* ---------- Arranque ---------- */
 loadItems().then(renderSite);
 loadInfo().then(renderInfo);
-api('/api/session').then(s => { logged = !!(s && s.logged); }).catch(() => {});
+api('/api/session').then(setSession).catch(() => {});
